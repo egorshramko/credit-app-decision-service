@@ -4,10 +4,8 @@ import ru.shramko.decisionservice.common.enums.Sex;
 import ru.shramko.decisionservice.scoring.ScoringCalculation;
 import ru.shramko.decisionservice.scoring.ScoringCalculationResult;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-@Data
 @RequiredArgsConstructor
 public class SexScoringCalculation implements ScoringCalculation {
 
