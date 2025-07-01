@@ -23,7 +23,7 @@ public class DecisionController {
 	@Autowired
 	private DecisionService decisionService;
 	
-	@PostMapping("/decision")
+	@PostMapping
 	public ResponseEntity<Decision> getDecision(
 			@RequestBody DecisionRequestDto request) {
 		
