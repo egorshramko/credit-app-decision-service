@@ -4,5 +4,5 @@ import ru.shramko.decisionservice.model.Decision;
 import ru.shramko.decisionservice.model.DecisionRequestDto;
 
 public interface DecisionService {
-	Decision getDecision(DecisionRequestDto dto);
+	Decision getDecision(DecisionRequestDto request) throws IllegalArgumentException;
 }
