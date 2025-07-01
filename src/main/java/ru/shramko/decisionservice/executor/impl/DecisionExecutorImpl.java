@@ -1,5 +1,7 @@
 package ru.shramko.decisionservice.executor.impl;
 
+import org.springframework.stereotype.Component;
+
 import ru.shramko.decisionservice.check.Check;
 import ru.shramko.decisionservice.check.CheckResult;
 import ru.shramko.decisionservice.executor.DecisionExecutor;
@@ -8,6 +10,7 @@ import ru.shramko.decisionservice.scoring.ScoringCalculation;
 import ru.shramko.decisionservice.scoring.ScoringCalculationResult;
 import ru.shramko.decisionservice.stage.StageDecisionFactory;
 
+@Component
 public class DecisionExecutorImpl implements DecisionExecutor {
 
 	@Override
