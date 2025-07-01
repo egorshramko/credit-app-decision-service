@@ -1,5 +1,6 @@
 package ru.shramko.decisionservice.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import ru.shramko.decisionservice.scoring.ScoringCalculationResult;
 @NoArgsConstructor
 public class ScoringResult {
 	private double value = 0;
-	private List<ScoringCalculationResult> scoringCalculationResults;
+	private List<ScoringCalculationResult> scoringCalculationResults = new ArrayList<>();
 	
 	public double getValue() {
 		return value;
