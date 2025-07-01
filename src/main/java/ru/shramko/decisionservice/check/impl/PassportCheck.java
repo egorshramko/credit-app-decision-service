@@ -34,21 +34,21 @@ public class PassportCheck implements Check {
 		return result;
 	}
 	
-	private int calculateAge() {
-		LocalDate today = LocalDate.now();
-		return Period.between(passportCheckData.getBirthDate(), today).getYears();
+	private int getAgeWhenPassportIssued() {
+		return Period.between(passportCheckData.getBirthDate(), passportCheckData.getPassportIssueDate()).getYears();
 	}
 	
 	private LocalDate getPassportExpirationDate() {
-		int age = this.calculateAge();
 		
-		if (age >= 14 && age < 20) {
+		int ageWhenPassportIssued = getAgeWhenPassportIssued();
+		
+		if (ageWhenPassportIssued >= 14 && ageWhenPassportIssued < 20) {
 			return passportCheckData.getBirthDate().plusYears(20);
 		}
-		else if (age >= 20 && age < 45) {
+		else if (ageWhenPassportIssued >= 20 && ageWhenPassportIssued < 45) {
 			return passportCheckData.getBirthDate().plusYears(45);
 		}
-		else if (age >= 45) {
+		else if (ageWhenPassportIssued >= 45) {
 			return passportCheckData.getBirthDate().plusYears(2000);
 		}
 		else {
