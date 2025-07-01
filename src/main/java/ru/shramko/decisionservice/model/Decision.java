@@ -10,7 +10,7 @@ import ru.shramko.decisionservice.scoring.ScoringCalculationResult;
 @Data
 public class Decision {
 	private List<CheckResult> checkResults = new ArrayList<>();
-	private ScoringResult scoringResult;
+	private ScoringResult scoringResult = new ScoringResult();
 	
 	public boolean addCheckResult(CheckResult checkResult) {
 		return checkResults.add(checkResult);
