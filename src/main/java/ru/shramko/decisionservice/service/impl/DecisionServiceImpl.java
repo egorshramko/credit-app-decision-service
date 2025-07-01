@@ -18,7 +18,7 @@ public class DecisionServiceImpl implements DecisionService {
 	@Override
 	public Decision getDecision(DecisionRequestDto request) throws IllegalArgumentException {
 		
-		if (request.getStage() == "profile") {
+		if (request.getStage().equals("profile")) {
 			return decisionExecutor.getDecision(new ProfileDecisionFactory(request));
 		}
 		else {

@@ -17,7 +17,6 @@ import ru.shramko.decisionservice.service.DecisionService;
 @Slf4j
 @RestController
 @RequestMapping(path = "/api/decision", produces = "application/json")
-@CrossOrigin(origins="http://localhost:8080")
 public class DecisionController {
 
 	@Autowired
@@ -28,6 +27,9 @@ public class DecisionController {
 			@RequestBody DecisionRequestDto request) {
 		
 		try {
+			
+			log.info("Request to /api/decision");
+			log.info(String.format("request.stage: %s", request.getStage()));
 			
 			return new ResponseEntity<>(
 					decisionService.getDecision(request), 
