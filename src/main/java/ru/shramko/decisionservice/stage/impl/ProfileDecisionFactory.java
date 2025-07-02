@@ -2,6 +2,7 @@ package ru.shramko.decisionservice.stage.impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import lombok.RequiredArgsConstructor;
@@ -22,7 +23,7 @@ public class ProfileDecisionFactory implements StageDecisionFactory {
 	private final DecisionRequestDto request;
 	
 	@Override
-	public Iterable<Check> createChecks() {
+	public Collection<Check> createChecks() {
 		
 		List<Check> profileChecks = new ArrayList<>();
 		
@@ -42,7 +43,7 @@ public class ProfileDecisionFactory implements StageDecisionFactory {
 	}
 
 	@Override
-	public Iterable<ScoringCalculation> createScoringCalculations() {
+	public Collection<ScoringCalculation> createScoringCalculations() {
 		
 		List<ScoringCalculation> profileCalcs = new ArrayList<>();
 		
