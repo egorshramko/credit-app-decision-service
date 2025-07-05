@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ru.shramko</groupId>
 	<artifactId>decisionservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>decisionservice</name>
 	<description>Decision Service for Credit Application</description>
 	<url/>
